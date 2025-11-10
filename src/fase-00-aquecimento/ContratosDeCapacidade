@@ -1,0 +1,56 @@
+Fase 0 — Sistema de Notificação de Eventos Acadêmicos
+
+Caso 1: Notificação de Alterações de Sala
+
+Objetivo -
+Informar rapidamente os alunos sobre mudanças de última hora na localização de aulas.
+
+Contrato -
+Notificar usuário sobre alteração de local de aula.
+
+Implementações -
+Implementação A: Push Notification
+Envia notificação instantânea via aplicativo móvel, exibindo alerta na tela do dispositivo com som e vibração.
+
+Implementação B: E-mail
+Envia mensagem detalhada para o e-mail institucional do aluno, contendo informações completas sobre a alteração (sala antiga, nova, horário, professor).
+
+Política de Escolha
+
+- *Se o evento ocorre em menos de 30 minutos* → Push Notification (urgência)
+- *Se o aviso é com antecedência superior a 2 horas* → E-mail (tempo para verificar)
+
+Riscos e Observações
+- *Push notification:* Depende do aluno ter o app instalado e permissões ativadas
+- *E-mail:* Pode não ser verificado imediatamente em situações urgentes, gerando ausências
+
+Caso 2: Envio de Resultado de Avaliações
+
+Objetivo
+Comunicar aos estudantes as notas obtidas em provas e trabalhos de forma segura e confidencial.
+
+Contrato
+Entregar resultado de avaliação ao estudante.
+
+Implementações
+
+Implementação A: Portal Web Seguro
+Disponibiliza as notas em sistema web protegido por autenticação, permitindo que o aluno acesse quando desejar e visualize histórico completo.
+
+Implementação B: SMS com Código
+Envia mensagem de texto com nota e código de verificação, garantindo recebimento imediato sem necessidade de acesso à internet.
+
+Política de Escolha
+- Para notas de avaliações regulares e parciais → Portal Web (preserva privacidade e histórico)
+- Para resultados finais críticos ou recuperações com prazo curto → SMS (garante ciência imediata)
+
+Riscos e Observações
+
+- Portal web: Exige conexão à internet e pode sofrer sobrecarga em períodos de pico
+- SMS: Tem custo por mensagem e limite de caracteres, não permitindo feedback detalhado sobre o desempenho
+
+Referências
+
+- Material didático: Interfaces em C# - Guia de Autoestudo
+- Princípios SOLID: ISP (Interface Segregation Principle)
+- Padrão Strategy para alternância de comportamentos
