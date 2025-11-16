@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-02-procedural\\NotificacaoProcedural\\NotificacaoProcedural.csproj": {}
+    "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-03-OOseminterface\\NotificacaoOO\\NotificacaoOO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-02-procedural\\NotificacaoProcedural\\NotificacaoProcedural.csproj": {
+    "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-03-OOseminterface\\NotificacaoOO\\NotificacaoOO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-02-procedural\\NotificacaoProcedural\\NotificacaoProcedural.csproj",
-        "projectName": "NotificacaoProcedural",
-        "projectPath": "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-02-procedural\\NotificacaoProcedural\\NotificacaoProcedural.csproj",
+        "projectUniqueName": "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-03-OOseminterface\\NotificacaoOO\\NotificacaoOO.csproj",
+        "projectName": "NotificacaoOO",
+        "projectPath": "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-03-OOseminterface\\NotificacaoOO\\NotificacaoOO.csproj",
         "packagesPath": "C:\\Users\\realt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-02-procedural\\NotificacaoProcedural\\obj\\",
+        "outputPath": "C:\\Users\\realt\\Documents\\UTFPR - CC\\3 - PERIODO\\OO OrquestradoresContratoEquipe\\IntarfacesEmC-Equipe01-OrquestradoresDeContrato-2\\src\\fase-03-OOseminterface\\NotificacaoOO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\realt\\AppData\\Roaming\\NuGet\\NuGet.Config"

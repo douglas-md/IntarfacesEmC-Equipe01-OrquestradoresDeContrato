@@ -1,6 +1,6 @@
 # IntarfacesEmC-Equipe01-OrquestradoresDeContrato
 
-Equipe:  [Douglas A. Garcia RA - 2539110], [Pedro Henrique Damasceno Gonçalves - 2509636]
+Equipe:  [Douglas A. Garcia RA - 2539110], [Pedro Henrique Damasceno Gonçalves - 2509636], [Emmanuelly Madeira - 2388472]
 
 # Sistema de Notificação de Eventos Acadêmicos
 
@@ -19,7 +19,7 @@ Estrutura do Projeto
     - [fase-00-aquecimento/](src/fase-00-aquecimento/) — Contratos e políticas conceituais
     - [fase-01-heuristica/](src/fase-01-heuristica/) — Evolução arquitetural (procedural, OO, interface)
     - [fase-02-procedural/](src/fase-02-procedural/) — Código funcional procedural mínimo (C#)
-    - [fase-03-oo-sem-interface/](src/fase-03-oo-sem-interface/) — Refatoração OO (em desenvolvimento)
+    - [fase-03-oo-sem-interface/](src/fase-03-OOseminterface/)
     - [fase-04-interface/](src/fase-04-interface/) — Refino OO com interfaces plugáveis (em desenvolvimento)
     - ...
 - [docs/arquitetura/](docs/arquitetura/) — Diagramas, mapas e decisões arquiteturais

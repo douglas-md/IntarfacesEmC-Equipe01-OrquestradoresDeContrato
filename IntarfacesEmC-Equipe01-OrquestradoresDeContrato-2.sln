@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fase-02-procedural", "fase-02-procedural", "{4034306F-ECC9-5A85-3254-18F396E4DCED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificacaoProcedural", "src\fase-02-procedural\NotificacaoProcedural\NotificacaoProcedural.csproj", "{A64FA3D2-EE9F-DE5C-4799-FE4C848C9438}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A64FA3D2-EE9F-DE5C-4799-FE4C848C9438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64FA3D2-EE9F-DE5C-4799-FE4C848C9438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64FA3D2-EE9F-DE5C-4799-FE4C848C9438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64FA3D2-EE9F-DE5C-4799-FE4C848C9438}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4034306F-ECC9-5A85-3254-18F396E4DCED} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{A64FA3D2-EE9F-DE5C-4799-FE4C848C9438} = {4034306F-ECC9-5A85-3254-18F396E4DCED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3705A693-8F52-4E20-BDC7-7B11591EEFE4}
+	EndGlobalSection
+EndGlobal
