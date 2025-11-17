@@ -20,7 +20,7 @@ Estrutura do Projeto
     - [fase-01-heuristica/](src/fase-01-heuristica/) — Evolução arquitetural (procedural, OO, interface)
     - [fase-02-procedural/](src/fase-02-procedural/) — Código funcional procedural mínimo (C#)
     - [fase-03-oo-sem-interface/](src/fase-03-OOseminterface/)
-    - [fase-04-interface/](src/fase-04-interface/) — Refino OO com interfaces plugáveis (em desenvolvimento)
+    - [fase-04-interface/](src/fase-04-interface/) — Refino OO com interfaces plugáveis
     - ...
 - [docs/arquitetura/](docs/arquitetura/) — Diagramas, mapas e decisões arquiteturais
 - [tests/](tests/) — (opcional) Testes automatizados das fases futuras
