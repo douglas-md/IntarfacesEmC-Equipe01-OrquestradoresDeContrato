@@ -2,7 +2,7 @@
 
 **Arquivo:** `src/fase-05-repository-inmemory/README.md`
 
-````markdown
+
 # Fase 5 — Repository InMemory
 
 ## Objetivo
