@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fase-07-repositoryjson", "fase-07-repositoryjson.csproj", "{9FD6FC99-C0D9-5BE6-7BE7-2DFD6DAF027A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FD6FC99-C0D9-5BE6-7BE7-2DFD6DAF027A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD6FC99-C0D9-5BE6-7BE7-2DFD6DAF027A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD6FC99-C0D9-5BE6-7BE7-2DFD6DAF027A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD6FC99-C0D9-5BE6-7BE7-2DFD6DAF027A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F5A2328-DC6F-4938-A5F7-C5D459F8ECC1}
+	EndGlobalSection
+EndGlobal

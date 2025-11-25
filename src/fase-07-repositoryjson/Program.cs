@@ -15,6 +15,8 @@ namespace RepositoryEventosCsv
 
             var pastaAtual = AppContext.BaseDirectory;
             var caminhoJson = Path.Combine(pastaAtual, "eventos_academicos.json");
+            
+            // Ponto de Composição: Troca da implementação (ex: de CSV para JSON)
             IRepository<EventoAcademico, int> repo = new JsonEventoRepository(caminhoJson);
 
             Console.WriteLine("--- Registrando eventos acadêmicos ---\n");

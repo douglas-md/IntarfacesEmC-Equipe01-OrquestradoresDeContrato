@@ -14,6 +14,7 @@ namespace RepositoryEventosCsv.Repositorio
             _filePath = filePath;
             _options = new JsonSerializerOptions
             {
+                // Serialização em camelCase, ignorando campos nulos, formato indentado.
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
                 WriteIndented = true,
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
@@ -23,12 +24,18 @@ namespace RepositoryEventosCsv.Repositorio
         public void Add(EventoAcademico evento)
         {
             var eventos = ListAll();
+            // Implementação simples: o ID é passado pelo cliente, mas idealmente seria gerado aqui.
             eventos.Add(evento);
             SaveAll(eventos);
         }
 
         public EventoAcademico GetById(int id)
-            => ListAll().FirstOrDefault(e => e.Id == id);
+        {
+            var evento = ListAll().FirstOrDefault(e => e.Id == id);
+            if (evento == null)
+                throw new KeyNotFoundException($"EventoAcademico with Id {id} not found.");
+            return evento;
+        }
 
         public List<EventoAcademico> ListAll()
         {
@@ -36,6 +43,7 @@ namespace RepositoryEventosCsv.Repositorio
                 return new List<EventoAcademico>();
 
             var json = File.ReadAllText(_filePath);
+            // Deserializa a lista de EventoAcademico do JSON
             return JsonSerializer.Deserialize<List<EventoAcademico>>(json, _options) ?? new List<EventoAcademico>();
         }
 
@@ -50,12 +58,14 @@ namespace RepositoryEventosCsv.Repositorio
 
         public void Remove(int id)
         {
+            // Filtra e mantém todos os eventos exceto o que possui o ID fornecido
             var eventos = ListAll().Where(e => e.Id != id).ToList();
             SaveAll(eventos);
         }
 
         private void SaveAll(List<EventoAcademico> eventos)
         {
+            // Serializa e reescreve todo o arquivo
             var json = JsonSerializer.Serialize(eventos, _options);
             File.WriteAllText(_filePath, json);
         }
