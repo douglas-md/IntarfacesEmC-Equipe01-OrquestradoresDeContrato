@@ -16,12 +16,15 @@ Estrutura do Projeto
 
 - [README.md](README.md) — Descrição geral do projeto (raiz)
 - [src/](src/) — Código e documentação por fase
-    - [fase-00-aquecimento/](src/fase-00-aquecimento/) — Contratos e políticas conceituais
-    - [fase-01-heuristica/](src/fase-01-heuristica/) — Evolução arquitetural (procedural, OO, interface)
-    - [fase-02-procedural/](src/fase-02-procedural/) — Código funcional procedural mínimo (C#)
-    - [fase-03-oo-sem-interface/](src/fase-03-OOseminterface/)
-    - [fase-04-interface/](src/fase-04-interface/) — Refino OO com interfaces plugáveis
-    - ...
+    - [Fase 0 - Aquecimento/](src/fase-00-aquecimento/) — Contratos e políticas conceituais
+    - [Fase 1 - Heuristica/](src/fase-01-heuristica/) — Evolução arquitetural (procedural, OO, interface)
+    - [Fase 2 - Procedural/](src/fase-02-procedural/) — Código funcional procedural mínimo (C#)
+    - [Fase 3 - OO-sem-interface/](src/fase-03-OOseminterface/)
+    - [Fase 4 - Interface/](src/fase-04-interface/NotificacaoInterface) — Refino OO com interfaces plugáveis
+    - [Fase 5 — Repository InMemory](./src/fase-05-repositoryinmemory/RepositoryEventos/) - Implementação de repositório em memória
+    - [Fase 6 — Repositório CSV](./src//fase-06-repository-csv/) - Persistência usando arquivos CSV.
+    - [Fase 7 — ISP na prática](./src/fase-07-repositoryjson/) -  Persistência usando JSON.
+    - [Fase 8 — ](./src/fase-07-isp/)...
 - [docs/arquitetura/](docs/arquitetura/) — Diagramas, mapas e decisões arquiteturais
 - [tests/](tests/) — (opcional) Testes automatizados das fases futuras
 
@@ -36,7 +39,14 @@ Estrutura do Projeto
 | fase-01-heuristica              | Discussão da evolução arquitetural: procedural $$\rightarrow$$ OO $$\rightarrow$$ interfaces. Markdown, mapas e tabelas. |
 | fase-02-procedural              | Código executável C# simples, lidando com seleção de modos e canais via fluxos condicionais.         |
 | fase-03-oo-sem-interface        | Refatoração para orientação a objetos: entidades, modularização inicial e separação de responsabilidades. |
-| fase-04-interface               | Utilização de interfaces para plugabilidade, política desacoplada, testabilidade (em andamento).     |
+| fase-04-interface-NotificacaoInterface               | Utilização de interfaces para plugabilidade, política desacoplada, testabilidade (em andamento).     |
+| fase-05-repositoryinmemory-RepositoryEventos    | Implementação de repositório em memória..                                                            |
+| fase-06-repository-csv         | Persistência usando arquivos CSV.                                                                    |
+| fase-07-repositoryjson        | Persistência usando JSON.                                                                            |
+| fase-08-Interface-Segregation-Principle        | Separação de contratos para solidificar a arquitetura.                                |
+| fase-09                         |                                |
+| fase-10                         |                                |
+| fase-11                         |                                |
 | docs/arquitetura                | Diagramas visuais (mapas mentais, comparativos, fluxos) e decisões de design documentadas.           |
 | tests/                          | Testes automatizados de fases avançadas (opcional/in progress).                                      |
 
