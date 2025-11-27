@@ -34,11 +34,12 @@ namespace Fase8Isp.Tests
             
             // Simula adição para garantir que a remoção funciona
             var eventoParaRemover = new EventoAcademico(101, "ParaRemover", "Desc", DateTime.Now, "r@r.com", false);
-            fakeRepo.Add(eventoParaRemover);
+            // Ao adicionar, o FakeWriteRepository gera um novo Id; devemos usar o Id retornado pelo Add
+            var eventoAdicionado = fakeRepo.Add(eventoParaRemover);
             Assert.Single(fakeRepo.Data);
-            
+
             // Act
-            var sucesso = service.Remover(eventoParaRemover.Id);
+            var sucesso = service.Remover(eventoAdicionado.Id);
 
             // Assert
             Assert.True(sucesso);

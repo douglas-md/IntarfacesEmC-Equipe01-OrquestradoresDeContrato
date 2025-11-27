@@ -5,6 +5,12 @@
     <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>Fase8Isp</RootNamespace> 
     <ImplicitUsings>enable</ImplicitUsings> <Nullable>enable</Nullable>
+    <!-- Prevent duplicate generation of assembly attributes in some SDK/tooling setups -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Also avoid generating the TargetFramework assembly attribute to prevent duplicates in some environments -->
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <!-- Explicitly set the startup object to avoid ambiguous entry-point detection -->
+    <StartupObject>Fase8Isp.NewBaseType</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

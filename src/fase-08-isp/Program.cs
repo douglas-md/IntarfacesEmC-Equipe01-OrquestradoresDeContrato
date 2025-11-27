@@ -2,6 +2,7 @@
 using Fase8Isp.Implementacoes;
 using Fase8Isp.Servicos;
 using System.Linq;
+using System;
 
 namespace Fase8Isp
 {
@@ -58,9 +59,7 @@ namespace Fase8Isp
 
             Console.WriteLine("\n=== FIM DA DEMONSTRAÇÃO ===");
         }
+    } 
     }
 
-    class Program : NewBaseType
-    {
-    }
-}
+
