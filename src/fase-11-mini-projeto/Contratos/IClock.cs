@@ -1,2 +1,4 @@
-public interface IClock { DateTimeOffset Now { get; }
+public interface IClock 
+{ 
+    DateTime Now { get; }
 }

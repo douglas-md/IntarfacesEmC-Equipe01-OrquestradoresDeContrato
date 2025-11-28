@@ -1,19 +1,60 @@
-using Dominio;
-using Dominio.Contratos;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("=== Mini-projeto Fase 11 – Sistema de Eventos Acadêmicos ===\n");
 
-var repo = new JsonEventoRepository();
+        // Ponto de composição centralizado
+        var repo = new JsonEventoRepository();
+        
+        var consultaService = new ConsultaEventosService(repo);
+        var gestaoService = new GestaoEventosService(repo, repo);
 
-var consulta = new ConsultaEventosService(repo);
-var gestao   = new GestaoEventosService(repo);
+        // Demo: Criar eventos de exemplo
+        CriarEventosExemplo(gestaoService);
 
-Console.WriteLine("=== Mini-projeto Fase 11 – Eventos Acadêmicos ===\n");
+        // Demo: Consultas
+        ExibirRelatorios(consultaService);
 
-gestao.Registrar(new(0, "AlteracaoSala", "Sala mudou para 501", DateTime.Now.AddHours(2), "aluno@facul.br"));
-gestao.Registrar(new(0, "EnvioNota", "Nota da P2 liberada", DateTime.Now.AddDays(1), "aluno@facul.br"));
+        Console.WriteLine("\n=== Fim da demonstração ===");
+        Console.WriteLine("Dados salvos em: eventos-academicos.json");
+    }
 
-Console.WriteLine("Eventos pendentes:");
-foreach (var e in consulta.Pendentes())
-    Console.WriteLine($"  • {e.Tipo}: {e.Descricao} – {e.DataHora:dd/MM HH:mm}");
+    static void CriarEventosExemplo(GestaoEventosService gestao)
+    {
+        Console.WriteLine("Registrando eventos de exemplo...");
 
-Console.WriteLine($"\nTotal cadastrados: {consulta.Todos().Count}");
-Console.WriteLine("Dados salvos em eventos-academicos.json");
+        gestao.RegistrarEvento(new EventoAcademico(
+            Id: 0,
+            Tipo: "AlteracaoSala",
+            Descricao: "Sala mudou para laboratório 501",
+            DataHora: DateTime.Now.AddHours(2),
+            DestinatarioEmail: "aluno@faculdade.edu.br"
+        ));
+
+        gestao.RegistrarEvento(new EventoAcademico(
+            Id: 0,
+            Tipo: "EnvioNota",
+            Descricao: "Nota da Prova B1 liberada",
+            DataHora: DateTime.Now.AddDays(1),
+            DestinatarioEmail: "aluno@faculdade.edu.br"
+        ));
+
+        Console.WriteLine("✓ Eventos registrados!\n");
+    }
+
+    static void ExibirRelatorios(ConsultaEventosService consulta)
+    {
+        Console.WriteLine("📊 RELATÓRIOS:\n");
+
+        var pendentes = consulta.ObterPendentes();
+        Console.WriteLine($"Eventos Pendentes: {pendentes.Count}");
+        foreach (var evento in pendentes)
+        {
+            Console.WriteLine($"  • {evento.Tipo}: {evento.Descricao}");
+        }
+
+        var todos = consulta.ObterTodos();
+        Console.WriteLine($"\nTotal de Eventos: {todos.Count}");
+    }
+}

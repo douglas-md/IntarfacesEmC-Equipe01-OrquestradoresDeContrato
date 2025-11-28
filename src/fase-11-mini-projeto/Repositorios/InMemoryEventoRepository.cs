@@ -1,8 +1,3 @@
-using Dominio;
-using Dominio.Contratos;
-
-namespace Repositorios;
-
 public sealed class InMemoryEventoRepository : 
     IReadRepository<EventoAcademico, int>,
     IWriteRepository<EventoAcademico, int>

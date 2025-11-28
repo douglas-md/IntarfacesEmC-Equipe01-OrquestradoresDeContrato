@@ -1,8 +1,4 @@
 using System.Text.Json;
-using Dominio;
-using Dominio.Contratos;
-
-namespace Repositorios;
 
 public sealed class JsonEventoRepository : 
     IReadRepository<EventoAcademico, int>,
@@ -11,11 +7,6 @@ public sealed class JsonEventoRepository :
     private readonly string _filePath;
     private List<EventoAcademico> _cache = new();
     private int _nextId = 1;
-    private readonly JsonSerializerOptions _jsonOptions = new() 
-    { 
-        WriteIndented = true,
-        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-    };
 
     public JsonEventoRepository(string filePath = "eventos-academicos.json")
     {
@@ -30,13 +21,12 @@ public sealed class JsonEventoRepository :
             try
             {
                 var json = File.ReadAllText(_filePath);
-                var eventos = JsonSerializer.Deserialize<List<EventoAcademico>>(json, _jsonOptions);
+                var eventos = JsonSerializer.Deserialize<List<EventoAcademico>>(json);
                 _cache = eventos ?? new List<EventoAcademico>();
                 _nextId = _cache.Count > 0 ? _cache.Max(x => x.Id) + 1 : 1;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine($"Erro ao carregar arquivo: {ex.Message}");
                 _cache = new List<EventoAcademico>();
             }
         }
@@ -44,16 +34,8 @@ public sealed class JsonEventoRepository :
 
     private void Salvar()
     {
-        try
-        {
-            var json = JsonSerializer.Serialize(_cache, _jsonOptions);
-            File.WriteAllText(_filePath, json);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Erro ao salvar arquivo: {ex.Message}");
-            throw;
-        }
+        var json = JsonSerializer.Serialize(_cache, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText(_filePath, json);
     }
 
     public EventoAcademico Add(EventoAcademico evento)
@@ -74,8 +56,7 @@ public sealed class JsonEventoRepository :
     public bool Update(EventoAcademico evento)
     {
         var index = _cache.FindIndex(x => x.Id == evento.Id);
-        if (index == -1)
-            return false;
+        if (index == -1) return false;
 
         _cache[index] = evento;
         Salvar();
@@ -85,16 +66,9 @@ public sealed class JsonEventoRepository :
     public bool Remove(int id)
     {
         var removido = _cache.RemoveAll(x => x.Id == id) > 0;
-        if (removido)
-            Salvar();
+        if (removido) Salvar();
         return removido;
     }
 
     public int Count => _cache.Count;
-}
-
-// Versão para testes de integração
-public sealed class JsonEventoRepositoryCustom : JsonEventoRepository
-{
-    public JsonEventoRepositoryCustom(string customPath) : base(customPath) { }
 }

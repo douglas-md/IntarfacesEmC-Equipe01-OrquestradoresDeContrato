@@ -1,5 +1,3 @@
-namespace Fase11MiniProjeto.Dominio;
-
 public sealed record EventoAcademico(
     int Id,
     string Tipo,
