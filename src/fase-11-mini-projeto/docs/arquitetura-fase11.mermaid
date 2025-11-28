@@ -1,0 +1,54 @@
+graph TB
+    subgraph "Camada de Apresentação"
+        CLI[Program.cs - Demo CLI]
+    end
+
+    subgraph "Camada de Serviços"
+        CONSULTA[ConsultaEventosService]
+        GESTAO[GestaoEventosService]
+    end
+
+    subgraph "Camada de Contratos/ISP"
+        READ[IReadRepository]
+        WRITE[IWriteRepository]
+        CLOCK[IClock]
+    end
+
+    subgraph "Camada de Repositórios"
+        MEMORY[InMemoryEventoRepository]
+        JSON[JsonEventoRepository]
+    end
+
+    subgraph "Camada de Domínio"
+        DOM[EventoAcademico Record]
+    end
+
+    subgraph "Camada de Testes"
+        UNIT[Unit Tests]
+        INTEG[Integration Tests]
+    end
+
+    CLI --> CONSULTA
+    CLI --> GESTAO
+    
+    CONSULTA --> READ
+    GESTAO --> READ
+    GESTAO --> WRITE
+    
+    READ --> MEMORY
+    READ --> JSON
+    WRITE --> MEMORY
+    WRITE --> JSON
+    
+    MEMORY --> DOM
+    JSON --> DOM
+    
+    UNIT -.-> CONSULTA
+    UNIT -.-> GESTAO
+    INTEG -.-> JSON
+
+    style DOM fill:#e1f5fe
+    style READ fill:#f3e5f5
+    style WRITE fill:#f3e5f5
+    style CONSULTA fill:#fff3e0
+    style GESTAO fill:#fff3e0
