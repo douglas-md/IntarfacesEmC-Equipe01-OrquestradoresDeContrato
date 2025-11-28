@@ -1,5 +1,6 @@
 
 using System.Threading.Channels;
+using Dominio;
 
 Console.WriteLine("=== Fase 9 – Demonstração ao vivo de Pump com retentativa ===\n");
 
@@ -11,8 +12,8 @@ var eventos = new[]
     new EventoAcademico(0, "Lembrete",     "Inscrição encerra amanhã", DateTime.Now.AddHours(5), "aluno1@facul.br", false)
 };
 
-// Reader real em memória (simula leitura de banco/arquivo)
-var reader = new InMemoryAsyncReader(eventos.Where(e => !e.JaNotificado));
+// Reader fake em memória (simula leitura de banco/arquivo)
+var reader = new FakeAsyncReader(eventos.Where(e => !e.JaNotificado));
 
 // Writer que falha 2 vezes e depois funciona (simula serviço externo instável)
 var writer = new FakeAsyncWriter(falhasIniciais: 2);

@@ -94,9 +94,15 @@ public class PumpEventosServiceTests
 
         cts.Cancel();
 
-
-
-        await Assert. PartialSuccess(task, typeof(OperationCanceledException));
+        // Deve lançar OperationCanceledException ou completar parcialmente
+        try
+        {
+            await task;
+        }
+        catch (OperationCanceledException)
+        {
+            // Esperado
+        }
 
         Assert.True(writer.Escritos.Count < 5);
 
