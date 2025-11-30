@@ -23,8 +23,12 @@ Estrutura do Projeto
     - [Fase 4 - Interface/](src/fase-04-interface/NotificacaoInterface) — Refino OO com interfaces plugáveis
     - [Fase 5 — Repository InMemory](./src/fase-05-repositoryinmemory/RepositoryEventos/) - Implementação de repositório em memória
     - [Fase 6 — Repositório CSV](./src//fase-06-repository-csv/) - Persistência usando arquivos CSV.
-    - [Fase 7 — ISP na prática](./src/fase-07-repositoryjson/) -  Persistência usando JSON.
-    - [Fase 8 — ](./src/fase-07-isp/)...
+    - [Fase 7 — Repositório JSON](./src/fase-07-repositoryjson/) -  Persistência usando JSON.
+    - [Fase 8 — ISP na prática](./src/fase-08-isp/)
+    - [Fase 9 — Dubles async](./src/fase-09-dubles-async/)
+    - [Fase 10 — Cheiros e antidotos](./src/fase-10-cheiros-antidotos/)
+    - [Fase 11 — mini projeto](./src/fase-11-mini-projeto/)
+
 - [docs/arquitetura/](docs/arquitetura/) — Diagramas, mapas e decisões arquiteturais
 - [tests/](tests/) — (opcional) Testes automatizados das fases futuras
 
@@ -44,9 +48,9 @@ Estrutura do Projeto
 | fase-06-repository-csv         | Persistência usando arquivos CSV.                                                                    |
 | fase-07-repositoryjson        | Persistência usando JSON.                                                                            |
 | fase-08-Interface-Segregation-Principle        | Separação de contratos para solidificar a arquitetura.                                |
-| fase-09                         |                                |
-| fase-10                         |                                |
-| fase-11                         |                                |
+| fase-09-Dubles-async                      |                                |
+| fase-10-cheiros-e-antidotos               |                                |
+| fase-11-mini-projetos                     |                                |
 | docs/arquitetura                | Diagramas visuais (mapas mentais, comparativos, fluxos) e decisões de design documentadas.           |
 | tests/                          | Testes automatizados de fases avançadas (opcional/in progress).                                      |
 
