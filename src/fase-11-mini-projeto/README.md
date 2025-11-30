@@ -1,9 +1,5 @@
 # Fase 11 — Mini-projeto de Consolidação
 
-**Equipe**: Douglas Moura Dias (RA: 123456), [Nome parceiro + RA], [Nome parceiro + RA]
-
-**Domínio**: Sistema de Gestão de Eventos Acadêmicos
-
 ## 🎯 Tecnologias Consolidadas
 
 - **ISP (Interface Segregation Principle)** → Contratos segregados (`IReadRepository` / `IWriteRepository`)
@@ -49,6 +45,8 @@ dotnet test --filter Category=Unit
 
 # Executar apenas testes de integração
 dotnet test --filter Category=Integration
+
+
 📋 Funcionalidades Implementadas
 Serviços de Domínio
 GestaoEventosService: Registrar, marcar como notificado, cancelar eventos
@@ -116,6 +114,7 @@ public class NotificacaoService
         // Usar apenas leitura → ISP em ação!
     }
 }
+
 📝 Checklist de Qualidade Aplicado
 Contratos coesos e segregados (ISP)
 
