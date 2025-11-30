@@ -1,10 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-</Project>
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fase-11-mini-projeto", "fase-11-mini-projeto.csproj", "{9A8B0BBA-ECF4-AFF9-E463-88CB34CA7AD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fase-11-mini-projeto.tests", "tests\fase-11-mini-projeto.tests.csproj", "{A48DDD93-84E6-0065-7AE7-4DF58F3F110B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A8B0BBA-ECF4-AFF9-E463-88CB34CA7AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8B0BBA-ECF4-AFF9-E463-88CB34CA7AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8B0BBA-ECF4-AFF9-E463-88CB34CA7AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8B0BBA-ECF4-AFF9-E463-88CB34CA7AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48DDD93-84E6-0065-7AE7-4DF58F3F110B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48DDD93-84E6-0065-7AE7-4DF58F3F110B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48DDD93-84E6-0065-7AE7-4DF58F3F110B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48DDD93-84E6-0065-7AE7-4DF58F3F110B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC69DA12-0A69-4098-B62D-AAE2B7ACF134}
+	EndGlobalSection
+EndGlobal

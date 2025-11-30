@@ -1,5 +1,3 @@
-using Dominio;
-using Repositorios;
 using Xunit;
 
 namespace Tests.Integration;
@@ -15,12 +13,12 @@ public class JsonRepositoryIntegrationTests
         try
         {
             // Act - Primeira instância
-            var repo1 = new JsonEventoRepositoryCustom(tempFile);
+            var repo1 = new JsonEventoRepository(tempFile);
             var evento = repo1.Add(new EventoAcademico(0, "TesteIntegracao", "Evento de integração", 
                 DateTime.Now, "integracao@test.com"));
 
             // Assert - Segunda instância deve ver os mesmos dados
-            var repo2 = new JsonEventoRepositoryCustom(tempFile);
+            var repo2 = new JsonEventoRepository(tempFile);
             var eventos = repo2.ListAll();
             var eventoRecuperado = repo2.GetById(evento.Id);
 
@@ -45,7 +43,7 @@ public class JsonRepositoryIntegrationTests
         
         try
         {
-            var repo1 = new JsonEventoRepositoryCustom(tempFile);
+            var repo1 = new JsonEventoRepository(tempFile);
             var evento = repo1.Add(new EventoAcademico(0, "Teste", "Original", DateTime.Now, "test@test.com"));
 
             // Act
@@ -53,7 +51,7 @@ public class JsonRepositoryIntegrationTests
             repo1.Update(atualizado);
 
             // Assert
-            var repo2 = new JsonEventoRepositoryCustom(tempFile);
+            var repo2 = new JsonEventoRepository(tempFile);
             var recuperado = repo2.GetById(evento.Id);
 
             Assert.NotNull(recuperado);

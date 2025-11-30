@@ -1,8 +1,5 @@
-using Dominio;
-using Dominio.Contratos;
-using Servicos;
-using Moq;
 using Xunit;
+using Moq;
 
 namespace Tests.Unit;
 
