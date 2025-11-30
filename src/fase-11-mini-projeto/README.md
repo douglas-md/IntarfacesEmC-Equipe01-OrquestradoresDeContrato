@@ -46,7 +46,7 @@ dotnet test --filter Category=Unit
 # Executar apenas testes de integração
 dotnet test --filter Category=Integration
 
-
+```
 📋 Funcionalidades Implementadas
 Serviços de Domínio
 GestaoEventosService: Registrar, marcar como notificado, cancelar eventos

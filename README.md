@@ -24,10 +24,10 @@ Estrutura do Projeto
     - [Fase 5 — Repository InMemory](./src/fase-05-repositoryinmemory/RepositoryEventos/) - Implementação de repositório em memória
     - [Fase 6 — Repositório CSV](./src//fase-06-repository-csv/) - Persistência usando arquivos CSV.
     - [Fase 7 — Repositório JSON](./src/fase-07-repositoryjson/) -  Persistência usando JSON.
-    - [Fase 8 — ISP na prática](./src/fase-08-isp/)
-    - [Fase 9 — Dubles async](./src/fase-09-dubles-async/)
-    - [Fase 10 — Cheiros e antidotos](./src/fase-10-cheiros-antidotos/)
-    - [Fase 11 — mini projeto](./src/fase-11-mini-projeto/)
+    - [Fase 8 — ISP na prática](./src/fase-08-isp/) - interfaces menores e mais específicas 
+    - [Fase 9 — Dubles async](./src/fase-09-dubles-async/) - Dublês assíncronos
+    - [Fase 10 — Cheiros e antidotos](./src/fase-10-cheiros-antidotos/) - Refatorações de codigos
+    - [Fase 11 — mini projeto](./src/fase-11-mini-projeto/) - Mini-projeto
 
 - [docs/arquitetura/](docs/arquitetura/) — Diagramas, mapas e decisões arquiteturais
 - [tests/](tests/) — (opcional) Testes automatizados das fases futuras
@@ -48,9 +48,9 @@ Estrutura do Projeto
 | fase-06-repository-csv         | Persistência usando arquivos CSV.                                                                    |
 | fase-07-repositoryjson        | Persistência usando JSON.                                                                            |
 | fase-08-Interface-Segregation-Principle        | Separação de contratos para solidificar a arquitetura.                                |
-| fase-09-Dubles-async                      |                                |
-| fase-10-cheiros-e-antidotos               |                                |
-| fase-11-mini-projetos                     |                                |
+| fase-09-Dubles-async                      | Dublês avançados e testes assíncronos                               |
+| fase-10-cheiros-e-antidotos               |6 refatorações reais do nosso projeto                            |
+| fase-11-mini-projetos                     |    Mini-projeto de Consolidação                            |
 | docs/arquitetura                | Diagramas visuais (mapas mentais, comparativos, fluxos) e decisões de design documentadas.           |
 | tests/                          | Testes automatizados de fases avançadas (opcional/in progress).                                      |
 
